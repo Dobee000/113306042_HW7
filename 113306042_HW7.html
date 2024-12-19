@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modified Homework</title>
+    <style>
+        /* General Reset */
+        body {
+            margin: 0;
+            background-color: #eeede1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        .main-container {
+            display: flex;
+            max-width: 900px;
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            height: 1200px;
+        }
+
+        .left-panel {
+            width: 330px;
+            display: flex;
+            flex-direction: column;
+            background-color: #333;
+            color: #fff;
+        }
+
+        .photo-panel {
+            height: 50%;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .photo-panel img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .text-content {
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .about-header {
+            font-size: 1.2em;
+            margin: 10px 0 5px;
+            text-align: left;
+        }
+
+        .about-me {
+            font-size: 0.9em;
+            line-height: 1.6;
+            margin-top: 10px;
+        }
+
+        .contact-header {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .nccu-icon img {
+            width: 100px;
+            display: block;
+            margin: 20px auto 0;
+        }
+
+        .right-panel {
+            width: 540px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        h2 {
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul.homework-list li {
+            margin-bottom: 15px;
+        }
+
+        ul.homework-list a {
+            text-decoration: none;
+            color: #6c757d;
+            transition: color 0.3s ease;
+        }
+
+        ul.homework-list a:hover {
+            color: #0056b3;
+        }
+
+        .year {
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .description {
+            line-height: 1.8;
+        }
+
+        .education-spacing {
+            height: 20px;
+        }
+
+        .homework-spacing {
+            height: 30px;
+        }
+
+        .music-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .music-item {
+            text-align: center;
+            flex: 1 1 23%; /* Adjust to fit four items per row */
+        }
+
+        .music-list img {
+            width: auto;
+            height: 56px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .music-item p {
+            margin-top: 5px;
+            font-size: 0.8em;
+        }
+
+        .note {
+            font-size: 12px;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .form-container {
+            margin-top: 20px;
+        }
+
+        .name-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        #edit-name-btn {
+            font-size: 0.8em;
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <!-- Left Panel -->
+        <div class="left-panel">
+            <div class="photo-panel">
+                <img src="webarebears.jpg" alt="webarebears">
+            </div>
+            <div class="text-content">
+                <div class="name-container">
+                    <h1 id="name">Dobee</h1>
+                    <button id="edit-name-btn">Edit</button>
+                </div>
+                <h2 class="about-header">ABOUT ME</h2>
+                <p class="about-me">
+                    I am a freshman in the Department of Management Information Systems at National Chengchi University.
+                    I am interested in studying programming and computer science foundations.
+                    I have experience with Java, HTML, and CSS.
+                    Hope that we can all have great university lives!
+                </p>
+                <div class="contact">
+                    <p class="contact-header">CONTACT</p>
+                    <p>113306042@nccu.edu.tw</p>
+                </div>
+                <div class="nccu-icon">
+                    <img src="National_Chengchi_University_logo.svg.png" alt="National_Chengchi_University_logo.svg">
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Panel -->
+        <div class="right-panel">
+            <section class="education">
+                <h2>Education</h2>
+                <ul>
+                    <li>
+                        <span class="year">2024–now</span><br>
+                        <span class="description">National Chengchi University, Department of MIS</span>
+                    </li>
+                    <br><br>
+                    <li>
+                        <span class="year">2022–2024</span><br>
+                        <span class="description">Taipei Municipal High School, Participated in Model United Nations club</span>
+                    </li>
+                    <br><br>
+                    <li>
+                        <span class="year">2019–2022</span><br>
+                        <span class="description">Middle School Graduation, Started developing an interest in music</span>
+                    </li>
+                    <div class="education-spacing"></div>
+                </ul>
+            </section>
+            <section class="homework">
+                <h2>Homework List</h2>
+                <ul class="homework-list">
+                    <li>
+                        HW1 - 
+                        <a href="https://github.com/Dobee000/HW1/blob/ac81db487c91d29497654e3bdf68990a35cd771a/113306042%20%E8%B3%87%E7%AE%A1%E4%B8%80%E4%B9%99%20%E6%A5%8A%E5%A9%89%E6%A6%86.pdf" target="_blank">
+                            https://github.com/Dobee000/HW1
+                        </a>
+                    </li>
+                    <li>
+                        HW2 - 
+                        <a href="https://github.com/Dobee000/HW21/blob/78eaef16fab8c13d607edd5a56ac02022fc01fa8/113306042_%E8%B3%87%E7%AE%A1%E4%B8%80%E4%B9%99_%E6%A5%8A%E5%A9%89%E6%A6%86.xlsx" target="_blank">
+                            https://github.com/Dobee000/HW2
+                        </a>
+                    </li>
+                    <li>
+                        HW3 - 
+                        <a href="https://github.com/Dobee000/HW3.git" target="_blank">
+                            https://github.com/Dobee000/HW3
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <div class="homework-spacing"></div>
+            <section class="music">
+                <h2>Favorite Music</h2>
+                <div class="music-list" id="music-list">
+                    <div class="music-item">
+                        <a href="https://www.youtube.com/watch?v=fRh_vgS2dFE" target="_blank">
+                            <img src="youtubemusic.png" alt="Sorry">
+                        </a>
+                        <p>Sorry</p>
+                    </div>
+                    <div class="music-item">
+                        <a href="https://www.youtube.com/watch?v=DK_0jXPuIr0" target="_blank">
+                            <img src="youtubemusic.png" alt="What Do You Mean?">
+                        </a>
+                        <p>What Do You Mean?</p>
+                    </div>
+                    <div class="music-item">
+                        <a href="https://www.youtube.com/watch?v=ENjrJ_zyeUc" target="_blank">
+                            <img src="youtubemusic.png" alt="Off My Face">
+                        </a>
+                        <p>Off My Face</p>
+                    </div>
+                    <div class="music-item">
+                        <a href="https://youtu.be/kTJczUoc26U?si=A3jvQyVzolGLlrSB" target="_blank">
+                            <img src="youtubemusic.png" alt="Stay">
+                        </a>
+                        <p>Stay</p>
+                    </div>
+                </div>
+                <button id="add-music-btn">add</button>
+                <div id="music-form" class="form-container hidden">
+                    <input type="text" id="music-link" placeholder="Enter music link">
+                    <input type="text" id="music-name" placeholder="Enter music name">
+                    <button id="submit-music-btn">Submit</button>
+                </div>
+                <p class="note">
+                    Note: Justin Bieber's music offers emotional and catchy tunes. "Sorry" features infectious beats and heartfelt lyrics, while "What Do You Mean?" captivates with its playful rhythm. "Off My Face" delivers tender acoustic vibes, and "Stay" with The Kid LAROI is an unmissable, energetic anthem.
+                </p>
+            </section>
+        </div>
+    </div>
+    <script>
+        let isEditing = false;
+
+        // Edit Name Functionality
+        document.getElementById("edit-name-btn").addEventListener("click", () => {
+            const nameElement = document.getElementById("name");
+            const btn = document.getElementById("edit-name-btn");
+
+            if (isEditing) {
+                const input = document.getElementById("name-input");
+                nameElement.textContent = input.value;
+                btn.textContent = "Edit";
+            } else {
+                const currentName = nameElement.textContent;
+                nameElement.innerHTML = `<input id='name-input' value='${currentName}' />`;
+                btn.textContent = "Save";
+            }
+            isEditing = !isEditing;
+        });
+
+        // Add Music Functionality
+        document.getElementById("add-music-btn").addEventListener("click", () => {
+            document.getElementById("music-form").classList.toggle("hidden");
+        });
+
+        document.getElementById("submit-music-btn").addEventListener("click", () => {
+            const musicLink = document.getElementById("music-link").value;
+            const musicName = document.getElementById("music-name").value;
+
+            if (musicLink && musicName) {
+                const musicList = document.getElementById("music-list");
+                const newMusicItem = document.createElement("div");
+
+                newMusicItem.classList.add("music-item");
+                newMusicItem.innerHTML = `
+                    <a href="${musicLink}" target="_blank">
+                        <img src="youtubemusic.png" alt="${musicName}">
+                    </a>
+                    <p>${musicName}</p>
+                `;
+
+                musicList.appendChild(newMusicItem);
+                document.getElementById("music-form").classList.add("hidden");
+                document.getElementById("music-link").value = "";
+                document.getElementById("music-name").value = "";
+            } else {
+                alert("Please fill out both fields!");
+            }
+        });
+    </script>
+</body>
+</html>
